@@ -10,15 +10,12 @@ hexNumbers = {
 def hexToDec(hexNum):
     sum=1
     #Check exceptions
-    if len(hexNum)>3:
-        return None
-    
     for i in hexNum: 
         if hexNumbers.get(i)== None:
             return None
         else: 
             continue 
-
+    #Calculates the hex num for up to 3 digits and returns the value:
     if len(hexNum)==3:
         sum = hexNumbers[hexNum[0]]*256 + hexNumbers[hexNum[1]]*16 + hexNumbers[hexNum[2]]
         return sum 
@@ -30,3 +27,4 @@ def hexToDec(hexNum):
         return sum
     else:
         return None
+
